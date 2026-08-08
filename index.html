@@ -48,13 +48,13 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,
   <section class="mapbox">
     <h2 class="title">📍 ひまわりマップ</h2>
     <div class="map"><div class="lake"></div><span class="pin a">📍</span><span class="pin b">🌻</span><span class="pin c">📍</span></div>
-    <a class="btn" id="mapLink" target="_blank" rel="noopener">3スポットをGoogleマップで探す →</a>
+    <a class="btn" id="mapLink" target="_blank" rel="noopener">指宿のひまわりをGoogleマップで見る →</a>
   </section>
 
   <div class="guide">
     <b>📍 場所の目印</b><br>
-    山川岡児ケ水：湯通堂青果 山川事業所（倉庫裏付近）<br>
-    池田湖：中浜営農研修センター（中浜公民館）の道路向かい<br>
+    山川岡児ケ水：湯通堂青果の倉庫裏付近<br>
+    池田湖：中浜公民館の道路向かい<br>
     JR西大山駅：駅周辺
   </div>
 </main>
@@ -69,27 +69,27 @@ const DATA = {
   main: {
     place: "山川岡児ケ水",
     status: "● 見ごろ",
-    comment: "湯通堂青果 山川事業所の倉庫裏付近。開聞岳とひまわりを一緒に楽しめる、指宿らしい夏の風景。",
+    comment: "湯通堂青果の倉庫裏付近。開聞岳とひまわりを一緒に楽しめる、指宿らしい夏の風景。",
     photo: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=1200&q=88"
   },
   spots: [
     {
       place:"山川岡児ケ水",
-      landmark:"湯通堂青果 山川事業所（倉庫裏付近）",
+      landmark:"湯通堂青果の倉庫裏付近",
       status:"見ごろ", checked:"8/8確認", stars:"★★★★★", color:"#37a45b",
-      map:"https://www.google.com/maps/search/?api=1&query=%E6%8C%87%E5%AE%BF%E5%B8%82%E5%B1%B1%E5%B7%9D%E5%B2%A1%E5%85%90%E3%82%B1%E6%B0%B4286-7"
+      map:"https://www.google.com/maps/search/?api=1&query=31.1826859,130.5839444"
     },
     {
       place:"池田湖",
-      landmark:"中浜営農研修センター（中浜公民館）の道路向かい",
+      landmark:"中浜公民館の道路向かい",
       status:"まもなく見ごろ", checked:"8/7確認", stars:"★★★★☆", color:"#e4b632",
-      map:"https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E6%B5%9C%E5%96%B6%E8%BE%B2%E7%A0%94%E4%BF%AE%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC+%E6%8C%87%E5%AE%BF%E5%B8%82%E6%B1%A0%E7%94%B0"
+      map:"https://www.google.com/maps/search/?api=1&query=31.2476792,130.5474680"
     },
     {
       place:"JR西大山駅",
-      landmark:"鹿児島県指宿市山川大山602",
+      landmark:"駅周辺",
       status:"咲き始め", checked:"8/7確認", stars:"★★☆☆☆", color:"#e78d3b",
-      map:"https://www.google.com/maps/search/?api=1&query=JR%E8%A5%BF%E5%A4%A7%E5%B1%B1%E9%A7%85+%E6%8C%87%E5%AE%BF%E5%B8%82%E5%B1%B1%E5%B7%9D%E5%A4%A7%E5%B1%B1602"
+      map:"https://www.google.com/maps/search/?api=1&query=31.1904804,130.5769267"
     }
   ]
 };
