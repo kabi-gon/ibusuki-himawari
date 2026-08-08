@@ -17,19 +17,23 @@ main{padding:22px 17px 95px}.row{display:flex;justify-content:space-between;alig
 .feature{overflow:hidden;border-radius:20px;background:var(--soft);border:1px solid #e7ebe5}.featureImg{height:205px;background:center/cover no-repeat}.featureBody{padding:15px}.pill{display:inline-block;padding:6px 10px;border-radius:20px;background:#e2f1e5;color:var(--green);font-size:12px;font-weight:800}.feature h2{font-size:20px;margin:8px 0 4px}.feature p{margin:0;color:#68736b;font-size:13px;line-height:1.6}
 .info{margin-top:25px}.spotlink{text-decoration:none;color:inherit;display:block}.spot{display:flex;align-items:center;padding:14px 12px;border:1px solid #e4e8e3;border-radius:15px;margin:9px 0;background:#fff}.dot{width:11px;height:11px;border-radius:50%;margin-right:11px;flex:0 0 auto}.spot strong{font-size:14px}.spot small{display:block;color:#778078;font-size:11px;margin-top:3px;line-height:1.45}.rate{margin-left:auto;font-size:12px;white-space:nowrap}.arrow{margin-left:8px;color:#9aa39a}
 .mapbox{margin-top:25px}
+.maphead{display:flex;justify-content:space-between;align-items:end;margin-bottom:8px}
+.mapnote{font-size:10px;color:#7a837b}
 .map{height:280px;border-radius:20px;position:relative;overflow:hidden;border:1px solid #dce5d9;background:
-linear-gradient(0deg,rgba(255,255,255,.15),rgba(255,255,255,.15)),
-linear-gradient(135deg,#e7efe3,#d9e9df)}
+radial-gradient(circle at 20% 18%,#b9dce3 0 12%,transparent 12.5%),
+linear-gradient(135deg,#e9f1e6,#ddebe1)}
 .map:before{content:"";position:absolute;width:150%;height:8px;background:#fff;transform:rotate(-16deg);top:150px;left:-70px;box-shadow:0 0 0 1px #d2dad0}
-.map:after{content:"";position:absolute;width:110%;height:7px;background:#f8f8f8;transform:rotate(27deg);top:90px;left:-15px;box-shadow:0 0 0 1px #d9dfd7}
-.lake{position:absolute;width:120px;height:72px;background:#b9dce3;border-radius:50%;left:9%;top:11%;opacity:.95}
-.maplabel{position:absolute;font-size:10px;color:#6d776f;background:#ffffffdd;padding:3px 6px;border-radius:8px;white-space:nowrap;border:1px solid #e1e5df;z-index:3}
-.pin{position:absolute;transform:translate(-50%,-100%);font-size:28px;z-index:4;text-decoration:none}
-.pin span{display:block;font-size:9px;font-weight:800;background:#fff;color:#2c392f;padding:3px 5px;border-radius:7px;border:1px solid #dde3db;margin-top:-4px;white-space:nowrap}
-.legend{display:grid;grid-template-columns:1fr;gap:6px;margin-top:10px;font-size:11px;color:#667067}
-.legend div{display:flex;align-items:center;gap:7px}
-.legend b{font-size:12px;color:#2a362d}
-.btn{display:block;text-align:center;background:var(--green);color:#fff;text-decoration:none;padding:13px;border-radius:13px;margin-top:12px;font-size:14px;font-weight:800}
+.map:after{content:"";position:absolute;width:110%;height:7px;background:#f8f8f8;transform:rotate(27deg);top:92px;left:-16px;box-shadow:0 0 0 1px #d9dfd7}
+.caption{position:absolute;font-size:10px;color:#6d776f;background:#ffffffd9;padding:3px 6px;border-radius:8px;border:1px solid #e1e5df;z-index:3;white-space:nowrap}
+.pin{position:absolute;transform:translate(-50%,-100%);font-size:26px;z-index:4;text-decoration:none}
+.pin span{display:block;font-size:9px;font-weight:800;background:#fff;color:#2c392f;padding:3px 6px;border-radius:7px;border:1px solid #dde3db;margin-top:-3px;white-space:nowrap}
+.pin.ikeda{transform:translate(-34%,-88%)}
+.pin.nishioyama{transform:translate(-63%,-100%)}
+.pin.okachiyogamizu{transform:translate(-75%,-100%)}
+.mapbuttons{display:grid;gap:8px;margin-top:12px}
+.mapbtn{display:flex;justify-content:space-between;align-items:center;text-decoration:none;border:1px solid #dfe5de;border-radius:13px;padding:12px 13px;background:#fff;color:#2c382e;font-size:13px;font-weight:800}
+.mapbtn small{display:block;font-weight:500;color:#7a837b;margin-top:2px;font-size:10px}
+.mapbtn .go{color:var(--green);font-size:16px}
 .guide{margin-top:24px;padding:14px;border-radius:15px;background:#f7f8f5;border:1px solid #e4e8e3;font-size:12px;line-height:1.7}.guide b{font-size:13px}
 nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);display:flex;justify-content:space-around;background:#fff;border-top:1px solid #e4e8e3;padding:9px 3px 11px;z-index:10}nav div{text-align:center;color:#788179;font-size:10px}nav b{display:block;font-size:18px;color:var(--green);margin-bottom:2px}
 @media(min-width:500px){.phone{margin:24px auto;border-radius:28px;overflow:hidden}nav{position:sticky;left:auto;transform:none}}
@@ -59,33 +63,42 @@ nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,
   </section>
 
   <section class="mapbox">
-    <h2 class="title">📍 ひまわりマップ</h2>
-    <div class="map">
-      <div class="lake"></div>
-      <div class="maplabel" style="left:10%;top:6%">池田湖</div>
-      <div class="maplabel" style="right:7%;bottom:8%">山川・開聞岳方面</div>
+    <div class="maphead">
+      <h2 class="title" style="margin-bottom:0">📍 ひまわりマップ</h2>
+      <span class="mapnote">※位置関係を示す簡易図</span>
+    </div>
 
-      <a class="pin" href="https://www.google.com/maps/search/?api=1&query=31.1826859,130.5839444" target="_blank" rel="noopener"
-         style="left:88.0%;top:82.0%">
-        📍<span>山川岡児ケ水</span>
-      </a>
-      <a class="pin" href="https://www.google.com/maps/search/?api=1&query=31.2476792,130.5474680" target="_blank" rel="noopener"
-         style="left:12.0%;top:18.0%">
+    <div class="map">
+      <div class="caption" style="left:9%;top:7%">池田湖</div>
+      <div class="caption" style="right:7%;bottom:7%">山川・開聞岳方面</div>
+
+      <a class="pin ikeda" href="https://www.google.com/maps/search/?api=1&query=31.2476792,130.5474680" target="_blank" rel="noopener"
+         style="left:14.0%;top:20.0%">
         🌻<span>池田湖</span>
       </a>
-      <a class="pin" href="https://www.google.com/maps/search/?api=1&query=31.1904804,130.5769267" target="_blank" rel="noopener"
-         style="left:73.4%;top:74.3%">
+
+      <a class="pin nishioyama" href="https://www.google.com/maps/search/?api=1&query=31.1904804,130.5769267" target="_blank" rel="noopener"
+         style="left:72.1%;top:72.8%">
         📍<span>JR西大山駅</span>
+      </a>
+
+      <a class="pin okachiyogamizu" href="https://www.google.com/maps/search/?api=1&query=31.1826859,130.5839444" target="_blank" rel="noopener"
+         style="left:86.0%;top:80.0%">
+        📍<span>山川岡児ケ水</span>
       </a>
     </div>
 
-    <div class="legend">
-      <div><span>🌻</span><b>池田湖</b><span>— 最も北側</span></div>
-      <div><span>📍</span><b>JR西大山駅</b><span>— 山川岡児ケ水の北西側</span></div>
-      <div><span>📍</span><b>山川岡児ケ水</b><span>— 3地点の中で最も南東側</span></div>
+    <div class="mapbuttons">
+      <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=31.2476792,130.5474680" target="_blank" rel="noopener">
+        <span>🌻 池田湖<small>中浜公民館の道路向かい</small></span><span class="go">›</span>
+      </a>
+      <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=31.1904804,130.5769267" target="_blank" rel="noopener">
+        <span>📍 JR西大山駅<small>駅周辺</small></span><span class="go">›</span>
+      </a>
+      <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=31.1826859,130.5839444" target="_blank" rel="noopener">
+        <span>📍 山川岡児ケ水<small>湯通堂青果の倉庫裏付近</small></span><span class="go">›</span>
+      </a>
     </div>
-
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=31.1826859,130.5839444" target="_blank" rel="noopener">山川岡児ケ水をGoogleマップで開く →</a>
   </section>
 
   <div class="guide">
